@@ -93,8 +93,10 @@ body {
     color: #F05F40;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; 
 }
-    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: #f05f40; }
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover 
+{
+      color: #F05F40; 
+}
   #mainNav .navbar-toggle {
     font-size: 12px;
     font-weight: 700;
@@ -380,12 +382,27 @@ header.masthead {
     color: #F05F40;
     background-color: white; }
 
-.btn {
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 300px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
+.btn 
+{
+	font-weight: 700;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 300px;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; 
+}
 
-.btn-xl {
-  padding: 15px 30px; }
+.btn-xl 
+{
+	padding: 15px 30px; 
+}
+  
+
+
+/****************style.css***************/
+
+/****************************************/
+
+.navbar-brand 
+{
+	white-space: nowrap;
+}

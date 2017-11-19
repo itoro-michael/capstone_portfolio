@@ -17,6 +17,15 @@ Template.navbar_template.helpers(
 			return "/";
 		}
 		return "#page-top";
+	},
+	
+	'nav_about_value': function()
+	{
+		if(Router.current().route.getName()=="contact.html")
+		{
+			return "/#about";
+		}
+		return "#about";
 	}
 });
 

@@ -320,6 +320,43 @@ form .row:first-child .floating-label-form-group {
 		width:350px;
 	}
 }
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover 
+{
+	color: white; 
+}
+.navbar-brand 
+{
+	white-space: normal;
+}
+
+@media (max-width: 767px) 
+{
+	header.masthead 
+	{
+		padding-top:80px;
+	}
+	
+	header.masthead 
+	{
+		height: 100%;
+		min-height: 600px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

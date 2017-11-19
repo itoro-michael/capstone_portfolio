@@ -8,3 +8,11 @@ Template.navbar_template.events(
 	}
 });
 
+Template.homepage_body_template.events(
+{
+	//Add active class when contact.html is called
+	'click #call-or-message': function(event)
+	{
+		$("#contact-href").click();
+	}
+});

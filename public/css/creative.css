@@ -177,7 +177,8 @@ body {
 		  } 
 	}
 
-header.masthead {
+header.masthead 
+{
   position: relative;
   width: 100%;
   min-height: auto;
@@ -188,12 +189,15 @@ header.masthead {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
-  header.masthead .header-content {
+  background-size: cover; 
+}
+  header.masthead .header-content 
+  {
     position: relative;
     width: 100%;
     padding: 150px 15px 100px;
-    text-align: center; }
+    text-align: center; 
+  }
     header.masthead .header-content .header-content-inner h1 {
       font-size: 30px;
       font-weight: 700;
@@ -212,13 +216,15 @@ header.masthead {
     header.masthead {
       height: 100%;
       min-height: 600px; }
-      header.masthead .header-content {
+      header.masthead .header-content 
+	  {
         position: absolute;
         top: 50%;
         padding: 0 50px;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%); }
+        transform: translateY(-50%); 
+	  }
         header.masthead .header-content .header-content-inner {
           max-width: 1000px;
           margin-right: auto;

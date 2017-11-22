@@ -26,6 +26,33 @@ Template.navbar_template.helpers(
 			return "/#about";
 		}
 		return "#about";
+	},
+	
+	'nav_skill_value': function()
+	{
+		if(Router.current().route.getName()=="contact.html")
+		{
+			return "/#skill-set";
+		}
+		return "#skill-set";
+	},
+	
+	'nav_edu_value': function()
+	{
+		if(Router.current().route.getName()=="contact.html")
+		{
+			return "/#education";
+		}
+		return "#education";
+	},
+	
+	'nav_cert_value': function()
+	{
+		if(Router.current().route.getName()=="contact.html")
+		{
+			return "/#certification";
+		}
+		return "#certification";
 	}
 });
 

@@ -30,6 +30,30 @@ Router.onBeforeAction(function()
   this.next();
 }, {only: ['contact.html']});
 
+Router.onAfterAction(function() 
+{
+	// always start by resetting scroll to top of the page
+	/* $(window).scrollTop(0); */
+	var hash=this.params.hash;
+	// if there is a hash in the URL, handle it
+	if (hash) 
+	{
+		// now this is important : Tracker.afterFlush ensures that iron-router
+		// rendering process has finished inserting the current route template
+		// into DOM so we can manipulate it via jQuery, if you skip this part
+		// the HTML element you want to scroll to might not yet be present in
+		// the DOM (this is probably why your code fails in the first place)
+		Tracker.afterFlush(function() 
+		{
+			var element=$("#"+hash);
+			var scrollTop = element.offset().top;
+			$("html,body").animate(
+			{
+				scrollTop: (scrollTop - 50)
+			}, 1000, "easeInOutExpo");
+		});
+	}
+});
 
 
 

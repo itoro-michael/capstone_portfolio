@@ -405,12 +405,33 @@ form .row:first-child .floating-label-form-group {
 		display:block;
 	}
 	
+	.header-div-padding
+	{
+		padding-top:77px !important;
+	}
+	
 }
-/* Change the chrome color for control */
+/* Change chrome autofill color for control */
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill 
 {
     background-color: white;
 }
+
+.header-div-padding
+{
+	padding-top:177px;
+}
+
+@media (min-width: 768px) 
+{
+	header.masthead .header-content 
+	{
+		-webkit-transform: translateY(-23%);
+		-ms-transform: translateY(-23%);
+		transform: translateY(-23%); 
+	}
+}
+
 
 
 

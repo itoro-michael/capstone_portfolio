@@ -36,18 +36,37 @@ Template.contact_body_template.events(
 	'submit #contactForm':function(event, template)
 	{
 		event.preventDefault();
+		var emailName = template.find('#name').value;
 		var emailAddr = template.find('#email').value;
-		var emailSubject = template.find('#name').value;
+		var emailSubject = template.find('#subject').value;
 		var emailMessage = template.find('#message').value;
+		
+		var sender = emailName+" "+"<"+emailAddr+">";
+		var siteAdmin = 'Itoro Ikon <itoroikon@gmail.com>';
 		
 		// Client: Asynchronously send an email.
 		//Syntax: to, from, subject, text
 		Meteor.call('send_email',
-			'Itoro Ikon <itoroikon@gmail.com>',
-			emailAddr,
+			siteAdmin,
+			sender,
 			emailSubject,
 			emailMessage
 		);
+		
+		// send acknowledgement autoresponder.
+		var autoResMessage = 	"Hello "+emailName+",\n\n"
+								"Thank you for your sending the email. "+
+								"I will respond to it as soon as possible, "+
+								"typically within 24 hours.\n\n"+
+								"Regards, \n"+
+								"Itoro Ikon";
+		var autoResSubject = "Acknowledgement";
+		/* Meteor.call('send_acknowledge',
+			sender,
+			siteAdmin,
+			autoResSubject,
+			autoResMessage
+		); */
 				
 		//When the user clicks the button, open the modal 
 		clearForm();
@@ -81,8 +100,9 @@ Template.body.events(
 //clear form
 var clearForm = function()
 {
-	document.getElementById('email').value = ""
 	document.getElementById('name').value = ""
+	document.getElementById('email').value = ""
+	document.getElementById('subject').value = ""
 	document.getElementById('message').value = "";	
 }
 	

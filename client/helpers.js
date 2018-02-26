@@ -1,4 +1,12 @@
 
+Template.homepage_body_template.helpers(
+{
+	'uni_of_lond': function()
+	{
+		return "University of London, Goldsmiths on Coursera";
+	}
+});
+
 Template.navbar_template.helpers(
 {
 	'contact_href_value': function()
